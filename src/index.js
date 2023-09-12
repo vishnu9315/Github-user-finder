@@ -6,7 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import { GithubProvider } from './context/context';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AuthWrapper } from './pages';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,6 +14,7 @@ root.render(
       domain= {process.env.DOMAIN}
       clientId= {process.env.CLIENTID}
       redirectUri={window.location.origin}
+      cacheLocation='localstorage'
     >
     <GithubProvider>
     <App />
