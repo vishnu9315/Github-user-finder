@@ -6,13 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import { GithubProvider } from './context/context';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { BrowserRouter as Router } from 'react-router-dom';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
     <Auth0Provider 
-      domain= {process.env.DOMAIN}
-      clientId= {process.env.CLIENTID}
+      domain='dev-qje78g6sz71r3xsb.us.auth0.com'
+      clientId='mZcujcSq0qaExZDWQWgB79YzbuVtkEfm'
       redirectUri={window.location.origin}
       cacheLocation='localstorage'
     >
